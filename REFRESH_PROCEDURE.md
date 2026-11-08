@@ -47,7 +47,7 @@ For each skill `<name>`:
    - `claude plugin validate .` if the CLI is available
    - No em dashes: `python3 -c "import pathlib,sys;b=[str(p) for p in pathlib.Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and chr(0x2014) in p.read_text(errors='ignore')];print(b);sys.exit(bool(b))"` prints `[]`
    - every `SKILL.md` still starts with `name:` and `description:` frontmatter
-3. Push and open a pull request to `main` titled `Monthly refresh YYYY-MM`. The body has one row per skill: what changed, sources added, and items needing review. Do not merge it; the owner reviews and merges.
+3. Push and open a pull request to `main` titled `Monthly refresh YYYY-MM`. The body has one row per skill: what changed, sources added, and items needing review. If `gh pr create` is unavailable, use the REST API: `gh api repos/madushan-sooriyarathne/social-kit/pulls -X POST -f title="..." -f head="refresh/YYYY-MM" -f base=main -F body=@pr-body.md`. Do not merge it; the owner reviews and merges.
 
 ## Adding a new skill
 
