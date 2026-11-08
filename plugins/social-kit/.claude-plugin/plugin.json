@@ -1,0 +1,10 @@
+{
+  "name": "social-kit",
+  "version": "1.0.0",
+  "description": "Digital marketing skills backed only by independent third-party expert research: Meta ads strategy, Meta organic growth, SEO strategy, SEO copywriting and brand shoot art direction.",
+  "author": {
+    "name": "Madushan Sooriyarathne"
+  },
+  "repository": "https://github.com/madushan-sooriyarathne/social-kit",
+  "keywords": ["marketing", "meta-ads", "instagram", "seo", "copywriting", "art-direction"]
+}

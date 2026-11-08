@@ -1,0 +1,17 @@
+{
+  "name": "social-kit",
+  "owner": {
+    "name": "Madushan Sooriyarathne"
+  },
+  "metadata": {
+    "description": "Digital marketing skills backed only by independent third-party expert research, refreshed monthly."
+  },
+  "plugins": [
+    {
+      "name": "social-kit",
+      "source": "./plugins/social-kit",
+      "description": "Meta ads, Meta organic growth, SEO strategy, SEO copywriting and art direction skills built from independent expert research.",
+      "category": "marketing"
+    }
+  ]
+}
