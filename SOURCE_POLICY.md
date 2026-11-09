@@ -18,6 +18,8 @@ Every claim in every skill must come from an independent, verifiable third-party
 | seo-expert | Anything authored by Google: Search Central docs and blog, Quality Rater Guidelines as a primary source, Think with Google, statements by Google employees or spokespeople (Search Liaison, Mueller, Illyes, Sullivan in his Google role), Google-sponsored studies. Third-party analysis of the 2024 Content Warehouse leak and US v. Google trial exhibits is allowed. |
 | seo-copywriting | Same as seo-expert, plus Keyword Planner guidance. Google tools may be named as tools to operate, never as authorities on what ranks. |
 | art-direction | Platform-authored creative guidance from Meta, TikTok, YouTube or Google, LinkedIn, Pinterest and Snapchat. Studies co-produced with a platform may be used only if flagged as such. |
+| landing-page-strategist | Google-authored material (Search Central, web.dev, Chrome team posts, Think with Google, Google-commissioned studies such as Deloitte's "Milliseconds Make Millions") and platform-authored best practices (Meta, Google Ads, LinkedIn, HubSpot marketing claims). Data from tool vendors (Unbounce, VWO, Optimizely, Hotjar, Contentsquare, Cloudflare and similar) only if flagged as vendor data. GA4, GTM and Search Console settings may be named to configure them. |
+| direct-response-copywriter | Anything authored by Google or any other search engine (Bing, Microsoft Advertising): docs, blogs, staff statements, sponsored studies, "best practices", and their quotes embedded in independent articles. ESP, ad platform and landing page tool data (Klaviyo, Mailchimp, Omnisend, Litmus, HubSpot, Unbounce, WordStream, Wynter) only if flagged as [Vendor]. Ad platform fields and character limits may be named. |
 
 ## Always excluded
 
