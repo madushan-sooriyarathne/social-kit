@@ -41,7 +41,7 @@ For each skill `<name>`:
 
 ## 2. Wrap up
 
-1. If any skill file under `plugins/` changed, bump the minor version in `plugins/social-kit/.claude-plugin/plugin.json` (1.0.0 to 1.1.0). If only changelogs changed, leave the version alone.
+1. If any skill file under `plugins/` changed, bump the minor version in `plugins/social-kit/.claude-plugin/plugin.json` (for example 1.1.0 to 1.2.0). If only changelogs changed, leave the version alone.
 2. Validate:
    - `python3 -c "import json;json.load(open('.claude-plugin/marketplace.json'));json.load(open('plugins/social-kit/.claude-plugin/plugin.json'))"`
    - `claude plugin validate .` if the CLI is available
@@ -54,4 +54,7 @@ For each skill `<name>`:
 1. Put the skill in `plugins/social-kit/skills/<name>/` (SKILL.md plus references and scripts).
 2. Create `research/<name>/brief.md` using an existing brief as the template, with the original research request verbatim.
 3. Add a row for it to the excluded-authors table in `SOURCE_POLICY.md`.
-4. Start `research/<name>/CHANGELOG.md` with the date of the original research. The next monthly run picks it up automatically.
+4. Start `research/<name>/CHANGELOG.md` with the date of the original research.
+5. Add a row to the skills table in `README.md`, mention the skill in the descriptions in `plugin.json` and `.claude-plugin/marketplace.json`, and bump the minor version in `plugin.json`.
+
+The next monthly run picks the new skill up automatically.
