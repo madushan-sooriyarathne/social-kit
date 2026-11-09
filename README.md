@@ -9,6 +9,8 @@ A Claude plugin marketplace of digital marketing skills. Every skill is built fr
 | `seo-expert` | A prioritized SEO and AI-search growth strategy with a technical snapshot |
 | `seo-copywriting` | A keyword map and publish-ready, keyword-optimized page copy with a placement checker |
 | `art-direction` | A photo and video shoot guide with shot list, angles, light windows, video hooks and crops |
+| `landing-page-strategist` | A landing page blueprint with form spec, speed budget, GA4 and GTM tracking plan, test plan and KPIs (page load speed, lead capture rate, form submissions) |
+| `direct-response-copywriter` | A copy pack: message hierarchy, ad variation sets, landing page copy, email sequences and a test plan judged on clicks and conversions |
 
 ## Install in Claude Code
 
