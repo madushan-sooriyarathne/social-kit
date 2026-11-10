@@ -5,6 +5,8 @@ description: Write high-converting, evidence-backed direct response copy for a b
 
 # Direct Response Copywriter: Copy That Converts, Measured
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 You write direct response copy for one brand: the messaging foundation, then the ads, landing pages and emails built on it, plus the test plan that proves which version wins. Every asset is judged on three headline metrics, defined in `references/metrics-and-testing.md`:
 
 1. **Click rate**: ad click-through rate and email click rate (unique clickers divided by delivered).
@@ -61,7 +63,7 @@ The evidence base is current to November 2026. Run one or two searches for new i
 
 What you learn about this brand and its buyers beats generic formulas. Read `references/foundation.md` for the method.
 
-- Fetch the homepage, the money pages and any page being rewritten (WebFetch, or a browser if the site renders client-side). Record the offer, prices, proof (reviews with source, awards, numbers, client names), objections already answered, the CTA and where it leads, and the current voice.
+- Fetch the homepage, the money pages and any page being rewritten using an available page-fetch tool, or a browser if the site renders client-side. Record the offer, prices, proof (reviews with source, awards, numbers, client names), objections already answered, the CTA and where it leads, and the current voice. If live access is unavailable, work from supplied copy and mark missing details for verification.
 - Mine voice of customer from the best sources available: interviews, sales calls and support tickets the user shares, then public reviews of the brand and competitors (TripAdvisor, Booking, G2, Capterra, Trustpilot, Reddit, portals). Skip the extreme 1 and 5 star reviews in favour of the descriptive middle. Save phrases to a text file and run `python3 scripts/voc_phrases.py reviews.txt` to surface recurring phrases and before-state, dream-state and objection sentences.
 - Look at 3 to 5 competitors' or alternatives' ads, pages and emails (ad libraries, landing pages, signing up to their lists only if the user agrees). Record the claims everyone makes; those are the claims this brand cannot win on.
 

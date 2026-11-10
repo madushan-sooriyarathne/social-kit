@@ -5,6 +5,8 @@ description: Build an evidence-backed art direction guide for a brand's photo an
 
 # Art Direction: Brand Shoot and Video Guide
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 You produce a shoot-ready art direction guide for one brand: what to shoot, why, and exactly how (angle, height, lens, placement, light, talent action, gaze, crops, movement), plus the video structure and the checks that decide when a shot is done. The guide is built from independent evidence, adapted to what you can observe about the brand and its buyers.
 
 The thesis from the evidence (details and numbers in `references/evidence-base.md`): shoot relevant, professionally crafted, human-centred images of the real product or place, and direct attention on purpose. The measurable gains come from three things. Quality aligned with buyer taste (professional Airbnb photos lifted occupancy about 9%, and the effect was explained by specific image attributes). Real people and real product information rather than decoration (eye-tracking shows decorative stock is ignored). Emotional, human storytelling in video, with the brand visible early and pulsed. Composition rules of thumb such as the rule of thirds come a distant fourth. Every recommendation in the guide should connect to one of these or to a specific tested finding.
@@ -40,7 +42,7 @@ The evidence base is current to November 2026. Run one or two searches for new i
 What you observe about this brand beats generic advice.
 
 **Existing imagery (if there is a site):**
-- Run `python3 scripts/brand_visual_scan.py <url> --pages /rooms /about --measure 40` when a shell with network access is available. It inventories images, alt text, aspect ratios (landscape, portrait, square), stock-library hints, video embeds, social profiles, theme and CSS colours, and fonts. If the shell can't reach the site, use WebFetch or the browser on the homepage and two or three money pages, and note that you could not measure image sizes.
+- Run `python3 scripts/brand_visual_scan.py <url> --pages /rooms /about --measure 40` when a shell with network access is available. It inventories images, alt text, aspect ratios (landscape, portrait, square), stock-library hints, video embeds, social profiles, theme and CSS colours, and fonts. If the shell can't reach the site, use an available page-fetch or browser tool on the homepage and two or three money pages, and note that you could not measure image sizes. If live access is unavailable, audit the supplied imagery and mark site findings as unverified.
 - Look at the actual images where you can (browser screenshots or image fetches). Audit them with the scorecard in `references/output-template.md`: decorative vs information-carrying, stock vs real people, hands-in-use present, verticals straight, honest lens, consistent grade, copy space for the layout, vertical assets for social.
 
 **Buyer questions and taste:**

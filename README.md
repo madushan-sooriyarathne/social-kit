@@ -1,6 +1,6 @@
 # Social Kit
 
-A Claude plugin marketplace of digital marketing skills. Every skill is built from deep research that uses only independent third-party experts and data, and is refreshed monthly.
+A plugin for Codex and Claude Code with digital marketing skills based on independent third-party research. The skills are refreshed monthly.
 
 | Skill | Point it at a brand or URL and get |
 |---|---|
@@ -21,6 +21,17 @@ A Claude plugin marketplace of digital marketing skills. Every skill is built fr
 
 Run `/plugin marketplace update social-kit` to pick up a new monthly version.
 
+## Install in Codex
+
+```sh
+codex plugin marketplace add madushan-sooriyarathne/social-kit
+codex plugin add social-kit@social-kit
+```
+
+In Codex desktop, open the Plugins Directory after adding the marketplace, select **Social Kit**, and install the plugin there if you have not already installed it from the CLI. Start a new session after installation. In the CLI, type `$` to select a skill such as `$social-kit:meta-ads-strategy`.
+
+Run `codex plugin marketplace upgrade social-kit` to pick up a new monthly version.
+
 ## How it stays current
 
 - `SOURCE_POLICY.md` defines which sources qualify and which authors are excluded per skill.
@@ -31,8 +42,10 @@ Run `/plugin marketplace update social-kit` to pick up a new monthly version.
 
 ```
 .claude-plugin/marketplace.json
+.agents/plugins/marketplace.json
 plugins/social-kit/
   .claude-plugin/plugin.json
+  plugin.json
   skills/<skill>/SKILL.md, references/, scripts/
 research/<skill>/brief.md, CHANGELOG.md
 SOURCE_POLICY.md

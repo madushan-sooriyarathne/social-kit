@@ -5,6 +5,8 @@ description: Build an evidence-based organic growth strategy for a brand on Meta
 
 # Organic Growth Strategy (Meta platforms)
 
+Resolve `references/` paths from the directory containing this `SKILL.md`.
+
 Turn a brand brief into a practical organic growth strategy for Instagram, Facebook and Threads, grounded in independent benchmark data rather than platform marketing.
 
 The evidence base lives in `references/evidence.md` (benchmarks, effect sizes, disagreements between studies). Read it before building the plan, because every recommendation in the output should trace back to it. The deliverable structure lives in `references/output-template.md`.

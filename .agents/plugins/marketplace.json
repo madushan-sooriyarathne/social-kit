@@ -1,0 +1,20 @@
+{
+  "name": "social-kit",
+  "interface": {
+    "displayName": "Social Kit"
+  },
+  "plugins": [
+    {
+      "name": "social-kit",
+      "source": {
+        "source": "local",
+        "path": "./plugins/social-kit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Marketing"
+    }
+  ]
+}

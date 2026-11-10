@@ -25,7 +25,7 @@ For each skill `<name>`:
    - Add each new source to the file's source list.
    - Update the "current to <Month YYYY>" line in the evidence file, and the matching date in `SKILL.md` (freshness check section), to the current month.
    - For meta-ads-strategy, also bump "Knowledge base last refreshed" in `references/sources.md`.
-   - Change other parts of `SKILL.md` only when a finding makes a workflow step wrong (for example a platform removed a feature the skill tells Claude to use). Do not touch `scripts/` unless a finding breaks their logic.
+   - Change other parts of `SKILL.md` only when a finding makes a workflow step wrong (for example a platform removed a feature the skill relies on). Do not touch `scripts/` unless a finding breaks their logic.
 5. **Style:** no em dashes anywhere. Keep files concise; if a reference file grows past about 20 KB, condense older, weaker items rather than appending.
 6. **Log** a new entry at the top of `research/<name>/CHANGELOG.md`:
 
@@ -41,10 +41,33 @@ For each skill `<name>`:
 
 ## 2. Wrap up
 
-1. If any skill file under `plugins/` changed, bump the minor version in `plugins/social-kit/.claude-plugin/plugin.json` (for example 1.1.0 to 1.2.0). If only changelogs changed, leave the version alone.
+1. If any skill file under `plugins/` changed, bump the minor version in both `plugins/social-kit/.claude-plugin/plugin.json` and `plugins/social-kit/plugin.json` (for example 1.2.0 to 1.3.0). If only changelogs changed, leave both versions alone.
 2. Validate:
-   - `python3 -c "import json;json.load(open('.claude-plugin/marketplace.json'));json.load(open('plugins/social-kit/.claude-plugin/plugin.json'))"`
-   - `claude plugin validate .` if the CLI is available
+   - Run this from the repo root to parse all four packaging files and check that they agree on plugin identity and location.
+
+     ```sh
+     python3 - <<'PY'
+     import json
+     from pathlib import Path
+
+     plugin = Path("plugins/social-kit")
+     claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text())
+     codex = json.loads((plugin / "plugin.json").read_text())
+     assert claude["name"] == codex["name"], "Plugin names differ"
+     assert claude["version"] == codex["version"], "Plugin versions differ"
+
+     for path in (".claude-plugin/marketplace.json", ".agents/plugins/marketplace.json"):
+         marketplace = json.loads(Path(path).read_text())
+         entries = [entry for entry in marketplace["plugins"] if entry["name"] == codex["name"]]
+         assert len(entries) == 1, f"Expected one Social Kit entry in {path}"
+         source = entries[0]["source"]
+         if isinstance(source, dict):
+             source = source["path"]
+         assert Path(source).resolve() == plugin.resolve(), f"Wrong plugin path in {path}"
+     PY
+     ```
+
+   - `claude plugin validate .` and `claude plugin validate plugins/social-kit` if the CLI is available.
    - No em dashes: `python3 -c "import pathlib,sys;b=[str(p) for p in pathlib.Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and chr(0x2014) in p.read_text(errors='ignore')];print(b);sys.exit(bool(b))"` prints `[]`
    - every `SKILL.md` still starts with `name:` and `description:` frontmatter
 3. Push and open a pull request to `main` titled `Monthly refresh YYYY-MM`. The body has one row per skill: what changed, sources added, and items needing review. If `gh pr create` is unavailable, use the REST API: `gh api repos/madushan-sooriyarathne/social-kit/pulls -X POST -f title="..." -f head="refresh/YYYY-MM" -f base=main -F body=@pr-body.md`. Do not merge it; the owner reviews and merges.
@@ -55,6 +78,6 @@ For each skill `<name>`:
 2. Create `research/<name>/brief.md` using an existing brief as the template, with the original research request verbatim.
 3. Add a row for it to the excluded-authors table in `SOURCE_POLICY.md`.
 4. Start `research/<name>/CHANGELOG.md` with the date of the original research.
-5. Add a row to the skills table in `README.md`, mention the skill in the descriptions in `plugin.json` and `.claude-plugin/marketplace.json`, and bump the minor version in `plugin.json`.
+5. Add a row to the skills table in `README.md`. Mention the skill in both plugin manifests and in `.claude-plugin/marketplace.json`. Bump the minor version in both plugin manifests.
 
 The next monthly run picks the new skill up automatically.

@@ -5,6 +5,8 @@ description: Build a complete, launch-ready Meta (Facebook and Instagram) ads st
 
 # Meta Ads Strategy
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 Turn one brand into a Meta ads strategy that a media buyer could launch from on Monday. The knowledge base in `references/` is a synthesis of independent experts and third-party datasets (Jon Loomer, Andrew Foxwell, Barry Hott, Charley Tichenor, Ben Heath, Common Thread Collective, Motion, Haus). Material published by Meta is deliberately excluded because it is written to encourage more spend and more automation. Apply the same rule if you research anything during a run: use independent practitioners and third-party data, not Meta's blog, Blueprint, help center or case studies.
 
 ## Bundled files
@@ -35,7 +37,7 @@ Pin down these five things before recommending anything, because almost every la
 
 - **Vertical**, which selects the section of `references/verticals.md` to read.
 - **Conversion economics**: expected cost per result for the deepest worthwhile event. If the brand has no history, estimate from price point and source-market CPMs and say it is an estimate.
-- **Budget math**: run `python scripts/budget_math.py --monthly-budget <amount> --cpa <expected cost per result>` and use its output for ad set count, learning feasibility and creative cadence.
+- **Budget math**: run `python3 scripts/budget_math.py --monthly-budget <amount> --cpa <expected cost per result>` and use its output for ad set count, learning feasibility and creative cadence.
 - **Special Ad Category**: housing, employment, credit/financial products and social or political issues carry targeting restrictions, and they apply based on the audience's location, not the advertiser's.
 - **Source market**: CPMs follow the audience. A Sri Lankan villa selling to UK travellers pays UK prices.
 

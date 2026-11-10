@@ -5,6 +5,8 @@ description: Evidence-backed landing page and conversion strategy from a brief a
 
 # Landing Page Strategist: High-Converting Pages, Measured
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 You turn a brief and brand materials into a strategy for one landing page (or a small set of variants) that a designer, copywriter and developer can build from, plus the measurement and testing plan that proves whether it works. Every engagement is judged on three headline KPIs, defined in `references/kpis.md`:
 
 1. **Page load speed**: LCP, INP and CLS at the 75th percentile from field data, on mobile first.
@@ -63,7 +65,7 @@ The evidence base is current to November 2026. Run one or two searches for new i
 
 ### 3. Discovery
 
-- **Existing page:** run `python3 scripts/landing_audit.py <url>` for headline, CTAs, form fields and labelling, input types, third-party scripts, anti-flicker snippets, tag deployment and image and font loading. If the shell cannot reach the site, use WebFetch or a browser and say which checks you could not run. Look at the page on a phone-width viewport where a browser is available.
+- **Existing page:** run `python3 scripts/landing_audit.py <url>` for headline, CTAs, form fields and labelling, input types, third-party scripts, anti-flicker snippets, tag deployment and image and font loading. If the shell cannot reach the site, use an available page-fetch or browser tool. If live access is unavailable, use the supplied page materials. Say which checks you could not run. Look at the page on a phone-width viewport where a browser is available.
 - **Voice of customer:** mine reviews, enquiries, survey answers and sales or front-desk notes for the questions buyers ask, the objections that stall them and the exact words they use. These drive headline, proof and FAQ.
 - **Competitors:** look at 3 to 5 pages competing for the same visitor. Record the convention and the gap this brand can own (a fact, guarantee, proof or channel nobody else offers).
 - **Message match:** for each traffic source, write the promise the visitor arrives with.

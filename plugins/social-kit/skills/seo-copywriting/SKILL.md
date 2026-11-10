@@ -5,6 +5,8 @@ description: Research keywords and write keyword-optimized website copy for a sp
 
 # SEO Copywriting: Keyword Research to Publish-Ready Copy
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 You turn a brand and its website into keyword-optimized copy for specific pages. Every page you write has one primary keyword chosen from real SERP evidence, a matching intent and format, keyword placement in the few zones that matter, and enough topical coverage and original brand information to beat what currently ranks.
 
 The thesis from the evidence (details and numbers in `references/evidence-base.md`): keyword placement is the entry ticket and coverage plus originality decides the position. Put the primary keyword in the URL, title, H1 and opening paragraph, then stop counting. Win with intent match, the subtopics and questions the top pages cover, and facts only this brand can supply (prices, amenities, data, process, location knowledge, first-party photos). Keyword density, word count targets and exact-match repetition have no support in the data.
@@ -32,7 +34,7 @@ Ask only what you cannot find and that would change the copy, in one short batch
 
 ### 2. Brand discovery
 
-Fetch the homepage, the main money pages, About and any existing page you are rewriting (WebFetch, or a browser if the site is client-rendered). Record:
+Fetch the homepage, the main money pages, About and any existing page you are rewriting using an available page-fetch tool, or a browser if the site is client-rendered. If live access is unavailable, use supplied page material and mark unverified site and search findings. Record:
 
 - What the brand sells and how a user completes the task on-site
 - Proprietary facts: prices or rates, specs, amenities, capacity, distances, opening details, team credentials, data, processes, awards (with source), reviews

@@ -5,6 +5,8 @@ description: Build an evidence-backed SEO strategy for organic growth for a spec
 
 # SEO Expert: Organic Growth Strategy
 
+Resolve `references/` and `scripts/` paths from the directory containing this `SKILL.md`. Use the installed script's absolute path and keep input and output files in the user's workspace.
+
 You produce a prioritized, evidence-backed SEO strategy for one brand. The strategy is built from what independent experts and controlled tests show, adapted to what you can actually observe about the brand.
 
 The core thesis from the evidence (read `references/evidence-base.md` for the details and numbers): organic growth in 2025 to 2026 goes to sites that are real businesses or destinations. They offer a product or service, let users complete the task on-site, own assets others cannot copy, focus tightly on a topic, and are brands people search for by name. Clicks per search are shrinking because of AI Overviews and zero-click behaviour, so brand demand, third-party mentions and conversions matter more than raw sessions. Every recommendation you make should connect back to this thesis or to a specific tested finding.
@@ -40,7 +42,7 @@ The evidence base is current to November 2026. Run one or two searches for core 
 Gather evidence about the brand before diagnosing. What you can observe beats generic advice.
 
 **If there is a website:**
-- Run `scripts/site_snapshot.py <url>` when a shell with network access is available. It reports whether primary content is present in server-rendered HTML, title, meta description, canonical, H1s, JSON-LD types, internal link count, robots.txt rules for search and AI crawlers, and sitemap presence. If the shell can't reach the site, use WebFetch on the homepage, robots.txt and sitemap.xml, and note that WebFetch output can't confirm server rendering (ask the user to check view-source or run the script locally).
+- Run `python3 scripts/site_snapshot.py <url>` when a shell with network access is available. It reports whether primary content is present in server-rendered HTML, title, meta description, canonical, H1s, JSON-LD types, internal link count, robots.txt rules for search and AI crawlers, and sitemap presence. If the shell can't reach the site, use an available page-fetch or browser tool on the homepage, robots.txt and sitemap.xml. If the tool only shows rendered or extracted content, mark server rendering as unverified and ask the user to check view-source or run the script locally. If live access is unavailable, work from supplied data and mark the technical checks you could not run.
 - Fetch 3 to 5 key pages (homepage, main money page such as a room, listing, product or pricing page, a content page). Note whether a user can complete the core task on-site, what proprietary assets exist (first-party photos, data, tools, availability, pricing), and how focused the topic scope is.
 - See `references/technical-checklist.md` for what to check and how to prioritize, including Next.js and headless CMS specifics.
 

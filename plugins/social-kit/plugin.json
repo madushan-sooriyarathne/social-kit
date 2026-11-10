@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "social-kit",
+  "version": "1.2.0",
+  "description": "Digital marketing skills backed only by independent third-party expert research: Meta ads strategy, Meta organic growth, SEO strategy, SEO copywriting, brand shoot art direction, landing page and conversion strategy, and direct response copywriting.",
+  "author": {
+    "name": "Madushan Sooriyarathne"
+  },
+  "repository": "https://github.com/madushan-sooriyarathne/social-kit",
+  "keywords": ["marketing", "meta-ads", "instagram", "seo", "copywriting", "art-direction", "landing-pages", "cro", "email-marketing"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Social Kit",
+        "shortDescription": "Research-backed digital marketing skills"
+      }
+    }
+  }
+}
